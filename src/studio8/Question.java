@@ -27,6 +27,10 @@ public class Question {
 		return this.points;
 	}
 	
+	public String getAnswer() {
+		return this.answer;
+	}
+	
 	public static void main(String[] args) {
 		Question q = new Question("What number studio is this?", "8", 2);
 		q.displayPrompt();

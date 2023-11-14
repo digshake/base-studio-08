@@ -14,14 +14,13 @@ public class Quiz {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Please enter your answer: ");
 		String out = in.next();
-		in.close();
 		return out;
 	}
 	
 	public int getTotalPoints() {
 		int sum = 0;
 		for(Question q : questions) {
-			sum = q.getPoints();
+			sum += q.getPoints();
 		}
 		return sum;
 	}

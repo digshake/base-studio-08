@@ -16,7 +16,6 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 		Question selectAll = new SelectAllQuestion("Select all of the following that can be found within a class:", "13", 4, choices);
 		selectAll.displayPrompt();
 		System.out.println(selectAll.checkAnswer("hi")); //no credit
-		System.out.println(selectAll.checkAnswer("2")); //no credit
 		System.out.println(selectAll.checkAnswer("13")); //full credit
 		System.out.println(selectAll.checkAnswer("31")); //full credit
 		System.out.println(selectAll.checkAnswer("1")); //3 points
