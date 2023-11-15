@@ -4,6 +4,10 @@ public class MultipleChoiceQuestion extends Question {
 	
 	public MultipleChoiceQuestion(String prompt, String answer, int points, String[] choices) {
 		//FIXME
+		
+		//Call the super class constructor, then create and set
+		//instance variables for any values that aren't handled
+		//by the base class
 	}
 	
 	public void displayPrompt() {
