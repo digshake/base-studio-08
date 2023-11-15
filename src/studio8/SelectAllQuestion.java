@@ -2,7 +2,8 @@ package studio8;
 
 public class SelectAllQuestion extends MultipleChoiceQuestion {
 
-	public SelectAllQuestion(String prompt, String answer, int points, String[] choices) {
+	public SelectAllQuestion(String prompt, String answer, String[] choices) {
+		//Hint: 1 point per choice
 		//FIXME
 	}
 	
@@ -13,7 +14,7 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 	
 	public static void main(String[] args) {
 		String[] choices = {"instance variables", "git", "methods", "eclipse"};
-		Question selectAll = new SelectAllQuestion("Select all of the following that can be found within a class:", "13", 4, choices);
+		Question selectAll = new SelectAllQuestion("Select all of the following that can be found within a class:", "13", choices);
 		selectAll.displayPrompt();
 		System.out.println(selectAll.checkAnswer("hi")); //no credit
 		System.out.println(selectAll.checkAnswer("13")); //full credit
