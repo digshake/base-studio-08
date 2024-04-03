@@ -13,10 +13,9 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 	}
 
 	private int findMissingCorrectAnswers(String givenAnswer) {
-		int incorrectValues = 0;
 		String answer = this.getAnswer();
 		//how many letters are in the correct answer but not the given answer?
-		incorrectValues = findMissingCharacters(givenAnswer, answer);
+		int incorrectValues = findMissingCharacters(givenAnswer, answer);
 		return incorrectValues;
 	}
 	
