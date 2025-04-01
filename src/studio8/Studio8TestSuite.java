@@ -12,8 +12,8 @@ import studio8.tests.SelectAllQuestionTest;
  * @author Victoria Prisco
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ MultipleChoiceQuestionTest.class, QuestionTest.class, QuizTest.class,
-	SelectAllQuestionTest.class, })
+@Suite.SuiteClasses({ QuestionTest.class, MultipleChoiceQuestionTest.class, SelectAllQuestionTest.class,
+	QuizTest.class, })
 public class Studio8TestSuite {
 
 }

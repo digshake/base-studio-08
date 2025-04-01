@@ -36,6 +36,13 @@ public class QuizTest {
 		Quiz studio8quiz = new Quiz(questions);
 		return studio8quiz;
 	}
+	
+	@Test
+	public void testGetTotalPoints() {
+		Quiz q = setUp();
+		int totalPoints = 7;
+		assertEquals(totalPoints, q.getTotalPoints());
+	}
 
 	@Test
 	public void testAllWrong() {
@@ -56,7 +63,7 @@ public class QuizTest {
 		
 		String score = output.substring(indexOfPoints);
 		
-	    assertTrue("Your output:\n" + score + "But we expected a score of -3.", score.contains("-3 points"));
+	    assertTrue("Your output:\n" + score + "But we expected: You earned -3 points.", score.contains("-3 points"));
 		
 	}
 	
