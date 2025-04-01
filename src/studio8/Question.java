@@ -1,20 +1,32 @@
 package studio8;
 
+import support.cse131.NotYetImplementedException;
+
 public class Question {
-	private String prompt;
-	private String answer;
-	private int points;
 	
+	/**
+	 * Constructor
+	 * @param prompt
+	 * @param answer
+	 * @param points
+	 */
 	public Question(String prompt, String answer, int points) {
-		this.prompt = prompt;
-		this.answer = answer;
-		this.points = points;
+		throw new NotYetImplementedException();
 	}
 	
+	/**
+	 * Prints out the current question's prompt, with a parenthetical 
+	 * number of points possible.
+	 */
 	public void displayPrompt() {
 		System.out.println(this.prompt + "(" + this.points + " points)");
 	}
 	
+	/**
+	 * Check the answer provided by a user
+	 * @param givenAnswer
+	 * @return the number of points earned by the givenAnswer
+	 */
 	public int checkAnswer(String givenAnswer) {
 		if(answer.equals(givenAnswer)) { //String comparison
 			return this.points;
@@ -23,18 +35,23 @@ public class Question {
 		}
 	}
 	
+	/**
+	 * Getter method for the points possible
+	 * @return int points
+	 */
 	public int getPoints() {
-		return this.points;
+		throw new NotYetImplementedException();
 	}
 	
+	/**
+	 * Getter method for the answer to the question
+	 * @return String answer
+	 */
 	public String getAnswer() {
-		return this.answer;
+		throw new NotYetImplementedException();
 	}
 	
 	public static void main(String[] args) {
-		Question q = new Question("What number studio is this?", "8", 2);
-		q.displayPrompt();
-		System.out.println(q.checkAnswer("hi"));
-		System.out.println(q.checkAnswer("8"));
+		// TODO: Create a Question object of your own!
 	}
 }
