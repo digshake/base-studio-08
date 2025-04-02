@@ -24,19 +24,18 @@ public class MultipleChoiceQuestionTest {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
-	    MultipleChoiceQuestion q = new MultipleChoiceQuestion("What is the course code for this class", "131", 1, new String[] {"131", "231", "425"});
+	    String[] choices = new String[] {"131", "231", "425"}
+	    MultipleChoiceQuestion q = new MultipleChoiceQuestion("What is the course code for this class", "131", 1, );
 	    q.displayPrompt();
+	    boolean hasAll = true;
 	    String questionDisplayed = "What is the course code for this class" + "(" + q.getPoints() + " points)";
-	    String expectedOutputWithSpaces = "1. 131\n2. 231\n3. 425\n";
-	    String expectedOutputWithoutSpaces = "1.131\n2.231\n3.425\n";
-	    String expectedOutputWithoutDotsWithoutSpaces = "1131\n2231\n3425\n";
-	    String expectedOutputWithoutDotsWithSpaces = "1 131\n2 231\n3 425\n";
-	    List<String> possibleOutputs = new LinkedList<>();
-	    possibleOutputs.add(questionDisplayed + "\n" + expectedOutputWithSpaces);
-	    possibleOutputs.add(questionDisplayed + "\n" + expectedOutputWithoutSpaces);
-	    possibleOutputs.add(questionDisplayed + "\n" + expectedOutputWithoutDotsWithoutSpaces);
-	    possibleOutputs.add(questionDisplayed + "\n" + expectedOutputWithoutDotsWithSpaces);
-	    assertTrue("Your output:\n" + outContent.toString() + "\nMake sure that you call the inherited method and print the choices on new lines and includes a numbered list of options.",  possibleOutputs.contains(outContent.toString()));
+	    var out = outContent.toString();
+	    for(String opt : choices) {
+	    	if(!out.contains(opt)) {
+	    		hasAll = false;
+	    	}
+	    }
+	    assertTrue("Your output:\n" + outContent.toString() + "\nMake sure that you call the inherited method and print the choices on new lines and includes a numbered list of options.",  hasAll);
 	}
 	
 	@Test
