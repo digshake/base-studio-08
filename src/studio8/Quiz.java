@@ -2,45 +2,50 @@ package studio8;
 
 import java.util.Scanner;
 
-public class Quiz {
+import support.cse131.NotYetImplementedException;
 
-	private Question[] questions;
+public class Quiz {
 	
+	/**
+	 * Constructor
+	 * @param questions
+	 */
 	public Quiz(Question[] questions) {
-		this.questions = questions;
+		throw new NotYetImplementedException();
 	}
 	
-	private String getUserAnswer() {
-		Scanner in = new Scanner(System.in);
+	/**
+	 * Prompts the user to answer, then returns a String containing their answer.
+	 * @param in
+	 * @return String answer
+	 */
+	private String getUserAnswer(Scanner in) {
 		System.out.print("Please enter your answer: ");
 		String out = in.next();
 		return out;
 	}
 	
+	/**
+	 * Gets the number of points possible in the quiz.
+	 * @return int number of total points
+	 */
 	public int getTotalPoints() {
-		int sum = 0;
-		for(Question q : questions) {
-			sum += q.getPoints();
-		}
-		return sum;
+		throw new NotYetImplementedException();
 	}
 	
-	public void takeQuiz() {
-		//FIXME
+	/**
+	 * Asks the user all question in the quiz, then prints out 
+	 * the amount of points the user earned. This print statement
+	 * should include "You earned ____ points"
+	 * 
+	 * @param in Scanner object to feed into getUserAnswer
+	 */
+	public void takeQuiz(Scanner in) {
+		throw new NotYetImplementedException();
 	}
+	
 	
 	public static void main(String[] args) {
-		Question q = new Question("What number studio is this?", "8", 2);
-
-		String[] choices = {"seven", "nine", "eight", "six"};
-		Question multipleChoice = new MultipleChoiceQuestion("What studio is this?", "3", 1, choices);
-
-		choices = new String[] {"instance variables", "git", "methods", "eclipse"};
-		Question selectAll = new SelectAllQuestion("Select all of the following that can be found within a class:", "13", choices);
-
-		Question[] questions = {q, multipleChoice, selectAll}; //create and add more questions!
-		
-		Quiz studio8quiz = new Quiz(questions);
-		studio8quiz.takeQuiz();
+		// TODO: Make your own Quiz!
 	}
 }
