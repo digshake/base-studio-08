@@ -24,8 +24,8 @@ public class MultipleChoiceQuestionTest {
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	    System.setOut(new PrintStream(outContent));
 	    
-	    String[] choices = new String[] {"131", "231", "425"}
-	    MultipleChoiceQuestion q = new MultipleChoiceQuestion("What is the course code for this class", "131", 1, );
+	    String[] choices = new String[] {"131", "231", "425"};
+	    MultipleChoiceQuestion q = new MultipleChoiceQuestion("What is the course code for this class", "131", 1, choices);
 	    q.displayPrompt();
 	    boolean hasAll = true;
 	    String questionDisplayed = "What is the course code for this class" + "(" + q.getPoints() + " points)";
