@@ -1,14 +1,7 @@
 package studio8.tests;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+
 
 import studio8.Question;
 
