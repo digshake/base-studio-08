@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test_src"/>
 	<classpathentry kind="src" path="support_src"/>
+	<classpathentry kind="lib" path="lib/junit-platform-console-standalone-1.13.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
